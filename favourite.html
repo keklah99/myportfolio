@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+.column {
+  float: left;
+  width: 31.70%;
+  padding: 10px;
+  height: 600px;  /*Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+img { 
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+.white{
+color:white;
+}
+
+h2{
+font-family:"Imprint MT Shadow";
+letter-spacing:3px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    width: 50%;
+  }
+}
+
+</style>
+</head>
+<body>
+<h2> All about my favourite things</h2>
+
+<div class="row">
+	<div class="column" style="background-color:rgba(255, 0, 0, 0.2);">
+	<h2>Songs</h2>
+	<p> I have many songs that i love to hear which are from various kind of languages. So, i just put some  of them here. Feel free to listen to them, okay!</p>
+	<li>Peluang Kedua by Nabila Razali</li>
+	<p><audio controls>
+	<source src="PELUANG KEDUA - NABILA RAZALI.mp3" type="audio/mpeg"
+	</audio></p>
+	<li> Touch Love - Hyorin </li>
+	<p><audio controls>
+	<source src="Touch Love.mp3" type="audio/mpeg"
+	</audio></p>
+	<li>Little Do You Know - Alex & Sierra </li>
+	<p><audio controls>
+	<source src="Alex & Sierra - Little Do You Know.mp3" type="audio/mpeg"
+	</audio></p>
+	</div>
+  <div class="column" style="background-color:hsla(0, 100%, 30%, 0.3);">
+  <h2>Movie</h2>
+  <p><i><b>Miracle In Cell No. 7 [2013]</b></i></p>
+<p>This is my favourite movie i have ever watched. The film is about a mentally challenged man wrongfully imprisoned for murder, who builds friendships with the hardened criminals in his cell, who in return help him see his daughter again by smuggling her into the prison. I cried like a baby watching this movie! :'(  </p>
+<p>
+<style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video" width="420" controls>
+<source src="Miracle in Cell No 7 Official Trailer 2013.mp4" type="video/mp4">
+  </video>
+  </p>
+</div>
+<script> 
+var myVideo = document.getElementById("video"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+  <div class="column" style="background-color:rgba(255, 0, 0, 0.2);">
+  <h2>Food</h2>
+  <p> Since I am a good eater, so i love all the yummy food in this world. Haha! Here i attached some of my favourite foods. :p</p>
+  <li> Nasi Lemak </li>
+
+	<img height=190 width=210 src="nasi lemak.jpg">
+	
+	<li> Kuih Seri Muka </li>
+	
+	<img height=220 width=185 src="kuih.jpg">
+  </div>
+</div>
+
+<div class="footer">
+  <p class="white">Hope you enjoyed! | Thank you</p>
+  <p><a href="main.html">Back to Home</a></p>
+</div>
+
+</body>
+</html>
